@@ -35,4 +35,6 @@ public class PacienteController {
 		return repository.findAll(paginacao)
 				.map(DadosListagemPacienteDTO::new);
 	}
+	
+	
 }
