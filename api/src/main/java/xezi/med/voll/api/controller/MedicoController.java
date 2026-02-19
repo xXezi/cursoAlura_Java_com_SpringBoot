@@ -21,7 +21,7 @@ import xezi.med.voll.api.dto.DadosAtualizacaoMedicosDTO;
 import xezi.med.voll.api.dto.DadosCadastroMedicoDTO;
 import xezi.med.voll.api.dto.DadosDetalhamentoMedicoDTO;
 import xezi.med.voll.api.dto.DadosListagemMedicoDTO;
-import xezi.med.voll.api.medico.Medico;
+import xezi.med.voll.api.domain.medico.Medico;
 import xezi.med.voll.api.repository.MedicoRepository;
 
 import java.net.URI;

@@ -1,6 +1,6 @@
 package xezi.med.voll.api.dto;
 
-import xezi.med.voll.api.paciente.Paciente;
+import xezi.med.voll.api.domain.paciente.Paciente;
 
 public record DadosListagemPacienteDTO(
 		Long id,

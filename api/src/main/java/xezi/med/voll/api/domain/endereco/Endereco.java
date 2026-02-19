@@ -1,4 +1,4 @@
-package xezi.med.voll.api.endereco;
+package xezi.med.voll.api.domain.endereco;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

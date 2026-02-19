@@ -21,7 +21,7 @@ import xezi.med.voll.api.dto.DadosAtualizacaoPacientesDTO;
 import xezi.med.voll.api.dto.DadosCadastroPacienteDTO;
 import xezi.med.voll.api.dto.DadosDetalhamentoPacienteDTO;
 import xezi.med.voll.api.dto.DadosListagemPacienteDTO;
-import xezi.med.voll.api.paciente.Paciente;
+import xezi.med.voll.api.domain.paciente.Paciente;
 import xezi.med.voll.api.repository.PacienteRepository;
 
 import java.net.URI;

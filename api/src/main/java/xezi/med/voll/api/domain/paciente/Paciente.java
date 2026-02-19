@@ -1,9 +1,7 @@
-package xezi.med.voll.api.medico;
+package xezi.med.voll.api.domain.paciente;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -12,49 +10,43 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import xezi.med.voll.api.dto.DadosAtualizacaoMedicosDTO;
-import xezi.med.voll.api.dto.DadosCadastroMedicoDTO;
-import xezi.med.voll.api.endereco.Endereco;
-import xezi.med.voll.api.enums.Especialidade;
+import xezi.med.voll.api.dto.DadosAtualizacaoPacientesDTO;
+import xezi.med.voll.api.dto.DadosCadastroPacienteDTO;
+import xezi.med.voll.api.domain.endereco.Endereco;
 
-@Table(name = "medicos")
-@Entity(name = "Medico")
+@Table(name = "pacientes")
+@Entity(name = "Paciente")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class Medico {
-	
+public class Paciente {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private String email;
-	private String crm;
 	private String telefone;
-	
-	@Enumerated(EnumType.STRING)
-	private Especialidade especialidade;
+	private String cpf;
 	
 	@Embedded
 	private Endereco endereco;
 	
 	private Boolean ativo;
 	
-	public Medico(DadosCadastroMedicoDTO dados) {
+	public Paciente(DadosCadastroPacienteDTO dados) {
 		this.nome = dados.nome();
 		this.email = dados.email();
-		this.crm = dados.crm();
 		this.telefone = dados.telefone();
-		this.especialidade = dados.especialidade();
+		this.cpf = dados.cpf();
 		this.endereco = new Endereco(dados.endereco());
 		this.ativo = true;
 	}
 	
-	public void atualizarInformacoes(DadosAtualizacaoMedicosDTO dados) {
+	public void atualizarInformacoes(DadosAtualizacaoPacientesDTO dados) {
 		if(dados.nome() != null) {
-			
-			this.nome = dados.nome();		
+			this.nome = dados.nome();
 		}
 		
 		if(dados.telefone() != null) {

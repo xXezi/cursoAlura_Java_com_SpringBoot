@@ -1,8 +1,8 @@
 package xezi.med.voll.api.dto;
 
-import xezi.med.voll.api.endereco.Endereco;
+import xezi.med.voll.api.domain.endereco.Endereco;
 import xezi.med.voll.api.enums.Especialidade;
-import xezi.med.voll.api.medico.Medico;
+import xezi.med.voll.api.domain.medico.Medico;
 
 public record DadosDetalhamentoMedicoDTO(
 		Long id,
